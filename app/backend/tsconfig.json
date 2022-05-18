@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "es2017",
+    "allowJs": true,
+    "lib": ["ES6"],
     "module": "commonjs",
     "sourceMap": true,                     
     "outDir": "./build",
     "rootDir": "./src",
-    "strict": true,
+    "removeComments": true,
+    "strict": false,
     "moduleResolution": "node",
     "baseUrl": ".", 
     "forceConsistentCasingInFileNames": true,
@@ -15,8 +18,15 @@
     "strictPropertyInitialization": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
     "paths": {
-      "*": ["node_modules/*"]
+      "*": ["node_modules/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@models/*": ["./src/models/*"],
+      "@services/*": ["./src/services/*"]
     }
   },
   "include": ["src/**/*"],
