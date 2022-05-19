@@ -25,10 +25,10 @@
     "paths": {
       "*": ["node_modules/*"],
       "@controllers/*": ["./src/controllers/*"],
-      "@models/*": ["./src/models/*"],
+      "@models/*": ["./src/database/models/*"],
       "@services/*": ["./src/services/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "migrations"],
   "exclude": ["src/tests"]
 }
