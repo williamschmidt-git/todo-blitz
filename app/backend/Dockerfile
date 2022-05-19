@@ -2,7 +2,7 @@ FROM node:16-alpine
 
 WORKDIR /app
 
-RUN cd app/app/backend
+RUN cd /app/backend
 
 COPY package*.json ./
 
