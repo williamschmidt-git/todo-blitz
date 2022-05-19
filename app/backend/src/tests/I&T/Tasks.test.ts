@@ -6,13 +6,13 @@ import { describe } from 'mocha';
 import app from '../../app';
 import TasksModel from '../../database/models/Tasks.model';
 import { Response } from 'superagent';
-import { allTasks } from './mocks/TasksMock';
+import { allTasks, errorService } from './mocks/TasksMock';
 
 chai.use(chaiHttp);
 
 const { expect } = chai;
 
-describe('Should return Hello World', () => {
+describe('/GET: In case of success: ', () => {
   let chaiHttpResponse: Response;
 
   before(async () => {
@@ -22,10 +22,36 @@ describe('Should return Hello World', () => {
 
   after(() => {
     (TasksModel.findAll as sinon.SinonStub).restore();
-  })
+  });
   
-  it('in case of success', async () => {
+  it('Should be with code 200', async () => {
     expect(chaiHttpResponse).to.have.status(200);
-    expect(chaiHttpResponse.body).to.have.property('message');
+    
+  });
+
+  it('Should be an array with correct elements', async () => {
+    expect(chaiHttpResponse.body).to.be.an('array');
+    expect(chaiHttpResponse.body[0]).to.be.deep.equal(allTasks[0])
+  });
+});
+
+describe('/GET: In case of failure: ', () => {
+  let chaiHttpResponse: Response;
+
+  before(async () => {
+    sinon.stub(TasksModel, 'findAll').resolves([]);
+    chaiHttpResponse = await chai.request(app).get('/');
+  });
+
+  after(() => {
+    (TasksModel.findAll as sinon.SinonStub).restore();
+  });
+
+  it('Should return an error code 400', () => {
+    expect(chaiHttpResponse).to.have.status(400);
+  })
+
+  it('Should be an error message', () => {
+    expect(chaiHttpResponse.body).to.have.property('message').equal('There isnt any tasks')
   })
 })

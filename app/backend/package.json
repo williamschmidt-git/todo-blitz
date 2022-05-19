@@ -2,7 +2,7 @@
   "name": "backend-todolist",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist",
+  "main": "./build/server",
   "scripts": {
     "build": "npx tsc",
     "test": "mocha -r ts-node/register ./src/tests/*$NAME*/*$NAME*.{test,spec}.ts -t 10000 --exit",
