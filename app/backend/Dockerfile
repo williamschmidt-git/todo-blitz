@@ -1,8 +1,6 @@
 FROM node:16-alpine
 
-WORKDIR /app
-
-RUN cd /app/app/backend/
+WORKDIR /app/backend
 
 COPY package*.json ./
 
