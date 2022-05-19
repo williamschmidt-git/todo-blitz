@@ -25,7 +25,9 @@ Tasks.init(
     taskStatus: {
       allowNull: false,
       type: DataTypes.STRING,
-    }
+    },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
   }, 
   {
     sequelize: db,
