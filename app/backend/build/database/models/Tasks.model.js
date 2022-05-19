@@ -23,7 +23,9 @@ Tasks.init({
     taskStatus: {
         allowNull: false,
         type: sequelize_1.DataTypes.STRING,
-    }
+    },
+    createdAt: sequelize_1.DataTypes.DATE,
+    updatedAt: sequelize_1.DataTypes.DATE,
 }, {
     sequelize: index_model_1.default,
     underscored: true,
