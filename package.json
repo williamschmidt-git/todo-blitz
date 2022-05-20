@@ -1,0 +1,20 @@
+{
+  "name": "blitz-carrer",
+  "version": "1.0.0",
+  "description": "Este projeto é uma simulação de um desafio técnico.",
+  "main": "app/backend/build/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamschmidt-git/todo-blitz.git"
+  },
+  "author": "William Schmidt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamschmidt-git/todo-blitz/issues"
+  },
+  "homepage": "https://github.com/williamschmidt-git/todo-blitz#readme"
+}
