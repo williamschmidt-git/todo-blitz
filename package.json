@@ -2,9 +2,9 @@
   "name": "blitz-carrer",
   "version": "1.0.0",
   "description": "Este projeto é uma simulação de um desafio técnico.",
-  "main": "index.js",
+  "main": "app/backend/build/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd app/ && npm run compose:down && npm run compose:up"
   },
   "repository": {
     "type": "git",
