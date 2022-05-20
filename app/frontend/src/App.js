@@ -1,11 +1,16 @@
 import AppProvider from "./context/Provider/appProvider";
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ToDo from "./components/Todo";
 
 function App() {
   return (
     <div className="App">
       <AppProvider>
-
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={ <ToDo/> }/>
+          </Routes>
+        </BrowserRouter>
       </AppProvider>
     </div>
   );

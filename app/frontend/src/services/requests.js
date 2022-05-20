@@ -3,4 +3,4 @@ export const fetchTodoList = async () => {
     .then((response) => response.json());
 
     return responseAPI;
-}
+};
