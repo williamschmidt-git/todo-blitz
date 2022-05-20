@@ -21,8 +21,6 @@ Todo-blitz requires [Node.js](https://nodejs.org/) v16+ to run and a Docker Engi
 
 Open your favorite Terminal on the root folder and run these commands.
 
-First Tab:
-
 ```sh
 npm start
 ```
