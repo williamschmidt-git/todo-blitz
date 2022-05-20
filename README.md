@@ -24,8 +24,14 @@ Open your favorite Terminal on the root folder and run these commands.
 ```sh
 npm start
 ```
+after installation, access:
+
+```sh
+http://localhost:3000/
+```
+
 ### Development
 
-In the proccess i used the TDD to develop the backend part, and tried to apply the MVC architeture using SOLID principles. In the frontend, i did a very basic react setup, using Hooks and Context, to provide to them the request from the backend. The project is far from finished, but the backend part has a solid start.
+In the proccess i used TDD to develop the backend part, and tried to apply the MVC architeture using SOLID principles. In the frontend, i did a very basic react setup, using Hooks and Context, to provide to them the request from the backend. The project is far from finished, but the backend part has a solid start.
 
 
