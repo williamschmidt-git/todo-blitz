@@ -1,8 +1,8 @@
-# Dillinger
-## TODO-BLITZ
+# TODO-BLITZ
 
-Todo-blitz is an software that runs an frontend and backend appliction in order to create a to do list.
+Todo-blitz is an software that runs a frontend and backend appliction in order to create a to do list.
 
+## Tech
 - React
 - NodeJs
 - MySQL
