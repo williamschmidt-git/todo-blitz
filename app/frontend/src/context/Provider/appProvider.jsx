@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import appContext from '../appContext';
 
 function AppProvider({ children }) {
-  const [todoList, setToDoList] = useState([]);
+  const [toDoList, setToDoList] = useState([]);
 
   const contextValue = {
-    todoList,
+    toDoList,
     setToDoList
   };
 

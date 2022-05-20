@@ -1,26 +1,33 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import appContext from "../context/appContext";
-import { fetchTodoList } from "../services/requests";
+import Header from "./Header";
+import { requestData } from "../services/requests";
 
 function ToDo() {
   const { toDoList, setToDoList } = useContext(appContext);
-  const allTasks = async () => {
-    const tasks = await fetchTodoList();
-    toDoList = tasks;
+
+  const request = async () => {
+    const endpoint = '/todo';
+    const data = await requestData(endpoint);
+    if(data) return setToDoList(data);
   };
-
+  
   useEffect(() => {
-    allTasks();
-  }, [])
-
+    request()
+  }, [toDoList])
+  
+  console.log(toDoList)
   return(
     !toDoList ? (
       <></>
     ) : (
       <div>
+      <Header />
       {
         toDoList.map((e) => {
-          return (<h1>{e.task}</h1>)
+          return (<ol>
+            <li>{e.task}</li>
+          </ol>)
         })
       }
     </div>
