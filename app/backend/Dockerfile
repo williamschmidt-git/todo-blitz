@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3001
 
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["node", "./app/app/backend/build/server"]
