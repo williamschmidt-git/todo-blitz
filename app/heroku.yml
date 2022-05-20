@@ -1,0 +1,9 @@
+setup:
+  addons:
+    - plan: mysql
+      as: DATABASE
+
+build:
+  docker:
+    web: frontend/Dockerfile
+    worker: backend/Dockerfile
