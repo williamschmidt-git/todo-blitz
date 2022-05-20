@@ -2,7 +2,8 @@
 
 Todo-blitz is an software that runs a frontend and backend appliction in order to create a to do list.
 
-## Tech
+## WIP
+### Tech
 - React
 - NodeJs
 - MySQL
@@ -10,11 +11,11 @@ Todo-blitz is an software that runs a frontend and backend appliction in order t
 - Docker
 - Sequelize ORM
 
-## Features
+### Features
 - Read a task
 - TDB: Create a Task, Update a Task, Delete a Task.
 
-## Installation
+### Installation
 
 Todo-blitz requires [Node.js](https://nodejs.org/) v16+ to run and a Docker Engine installed.
 
@@ -25,7 +26,7 @@ First Tab:
 ```sh
 npm start
 ```
-## Development
+### Development
 
 In the proccess i used the TDD to develop the backend part, and tried to apply the MVC architeture using SOLID principles. In the frontend, i did a very basic react setup, using Hooks and Context, to provide to them the request from the backend. The project is far from finished, but the backend part has a solid start.
 
